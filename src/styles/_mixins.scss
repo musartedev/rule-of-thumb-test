@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,300&display=swap');
+
+@mixin body-font {
+  font-family: 'Lato Light', sans-serif;
+}
+
+@mixin max-width {
+  margin: auto;
+  max-width: $max-width;
+}
+
+@mixin flex-all-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

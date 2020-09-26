@@ -1,0 +1,14 @@
+body {
+  @include body-font;
+
+  margin: 0;
+  color: $gray;
+}
+
+a {
+ text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}

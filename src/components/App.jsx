@@ -1,6 +1,12 @@
 import React from 'react';
-import '../styles/components/App.scss';
+import Header from './Header';
 
-const App = () => <h1>Speak out. Be heard. Be counted.</h1>;
+import '../styles/App.scss';
+
+const App = () => (
+  <div className="layout">
+    <Header />
+  </div>
+);
 
 export default App;
