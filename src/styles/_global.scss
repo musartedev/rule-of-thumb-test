@@ -6,9 +6,15 @@ body {
 }
 
 a {
- text-decoration: none;
+  text-decoration: none;
+  color: $gray;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 ul li {
-    list-style: none;
+  list-style: none;
 }

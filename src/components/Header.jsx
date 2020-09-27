@@ -8,7 +8,6 @@ const Header = () => {
     <header className="header">
       <div className="header__content">
         <div className="header__brand">Rule of Thumb.</div>
-
         <nav className="header__navigation">
           <ul className="navigationList">
             <li className="navigationList__item">
