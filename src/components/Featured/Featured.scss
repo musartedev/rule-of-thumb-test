@@ -1,0 +1,176 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.featured {
+  color: $white;
+  margin: 0 0 20px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  height: max-content;
+
+  &__background {
+    position: relative;
+    z-index: -1;
+  }
+
+  .countDown {
+    @include flex-all-centered;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 3px;
+    left: 0;
+    z-index: 1;
+    font-size: 1.3em;
+
+    > * {
+      @include flex-all-centered;
+      padding: 0 8px;
+      height: 100%;
+    }
+
+    &__title {
+      justify-content: flex-end;
+      text-transform: uppercase;
+      background-color: rgba($black, 0.5);
+      width: 35%;
+      font-weight: bolder;
+      font-size: 0.6em;
+    }
+
+    &__description {
+      justify-content: start;
+      text-transform: lowercase;
+      background-color: rgba($white, 0.5);
+      color: $black;
+      width: 65%;
+      font-size: 1em;
+
+      span {
+        font-weight: bolder;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__image {
+    box-sizing: content-box;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__box {
+    margin-top: -3px;
+    font-size: 0.9em;
+  }
+
+  &__info {
+    background-color: rgba($black, 0.6);
+    backdrop-filter: brightness(0.7) blur(2.2em);
+    padding: 1.25em;
+  }
+
+  &__title {
+    h3 {
+      font-size: 1.75em;
+      margin: 0.05em 0 0.5em;
+    }
+
+    span {
+      font-size: 0.7em;
+    }
+  }
+
+  &__infoLink {
+    margin: 1em 0;
+
+    a {
+      color: white;
+      font-size: 0.7em;
+      padding-bottom: 0.1em;
+      border-bottom: 1px solid $white;
+    }
+
+    svg {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+  }
+
+  &__callToAction {
+    font-weight: bolder;
+  }
+
+  &__actions {
+    @include flex-all-centered;
+
+    .action__option {
+      width: 50%;
+      text-align: center;
+      padding: 0.8em;
+      cursor: pointer;
+      &--up {
+        background-color: $primary;
+      }
+
+      &--down {
+        background-color: $secondary;
+      }
+    }
+  }
+
+  @media (min-width: $device-md) {
+    overflow: hidden;
+
+    &__box {
+      width: 350px;
+      position: absolute;
+      top: 8em;
+      left: 1em;
+      font-size: 1em;
+    }
+
+    &__info {
+      background-color: rgba($black, 0.2);
+      backdrop-filter: brightness(0.8) blur(2.2em);
+      padding: 1.5em;
+    }
+  }
+
+  @media (min-width: $device-lg) {
+    &__box {
+      width: 350px;
+      top: 20%;
+      left: 1em;
+      font-size: 1em;
+    }
+  }
+
+  @media (min-width: $device-xl) {
+    display: block;
+
+    .countDown {
+      bottom: 0;
+      font-size: 1.7em;
+    }
+
+    &__content {
+      @include max-width;
+      position: relative;
+    }
+
+    &__background {
+      max-height: 90vh;
+    }
+
+    &__box {
+      width: 35%;
+      left: 0;
+      top: 150px;
+      font-size: 1.5em;
+    }
+  }
+}
