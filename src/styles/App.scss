@@ -7,5 +7,5 @@
   display: grid;
 
   // Stick the footer to bottom, even if there's no content
-  grid-template-rows: 100px minmax(calc(100vh - 220px), 1fr) 100px;
+  grid-template-rows: minmax(calc(100vh - 120px), 1fr) 100px;
 }

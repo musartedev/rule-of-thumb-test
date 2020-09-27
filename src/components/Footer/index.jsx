@@ -1,12 +1,12 @@
 import React from 'react';
 import { AiFillFacebook, AiOutlineTwitter } from 'react-icons/ai';
 
-import '../styles/components/Footer.scss';
+import './Footer.scss';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <nav className="footer__nav--first">
+      <nav className="footer__nav footer__nav--first">
         <ul className="navigationList">
           <li className="navigationList__item">
             <a href="/">Terms and Conditions</a>
@@ -19,7 +19,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <nav className="footer__nav--second">
+      <nav className="footer__nav footer__nav--second">
         <ul className="navigationList">
           <li className="navigationList__item">Follow Us</li>
           <li className="navigationList__item">

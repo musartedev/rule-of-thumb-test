@@ -1,10 +1,12 @@
-@import '../mixins.scss';
-@import '../variables.scss';
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
 
 .header {
-  background-image: linear-gradient(to top, transparent, rgba($gray, 0.6));
-  height: 6.25em;
+  background-image: linear-gradient(to top, transparent, rgba($gray, 1));
+  height: $header-xs;
   color: $white;
+  position: fixed;
+  width: 100%;
 
   &__content {
     @include max-width;
@@ -25,6 +27,8 @@
   }
 
   @media (min-width: $device-md) {
+    height: $header-md;
+
     &__content {
       font-size: 1.1em;
     }
