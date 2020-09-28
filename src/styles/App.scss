@@ -9,3 +9,8 @@
   // Stick the footer to bottom, even if there's no content
   grid-template-rows: minmax(calc(100vh - 120px), 1fr) 100px;
 }
+
+.main {
+  @include max-width;
+  width: 100%;
+}

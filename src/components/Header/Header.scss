@@ -5,7 +5,7 @@
   background-image: linear-gradient(to top, transparent, rgba($gray, 1));
   height: $header-xs;
   color: $white;
-  position: fixed;
+  position: absolute;
   width: 100%;
 
   &__content {

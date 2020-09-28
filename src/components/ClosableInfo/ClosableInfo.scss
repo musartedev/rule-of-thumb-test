@@ -1,0 +1,95 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.closableInfo {
+  background-color: $gray-light;
+  margin: 10px auto;
+  padding: 15px 10px;
+  position: relative;
+
+  &__title {
+    text-align: center;
+    font-size: 1.1em;
+
+    p {
+      margin: 5px;
+    }
+
+    p:nth-child(2n) {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 0.9em;
+    text-align: center;
+  }
+
+  &__button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  @media (min-width: $device-md) {
+    @include flex-all-centered;
+    padding: 20px;
+    width: calc(100% - 4.5em);
+    &__title {
+      margin-right: 15px;
+      flex: 1;
+      font-size: 1em;
+
+      p:nth-child(2n) {
+        font-size: 1.8em;
+        margin: 0;
+      }
+    }
+
+    &__description {
+      text-align: initial;
+      flex: 3;
+    }
+
+    &__button {
+      position: initial;
+    }
+  }
+
+  @media (min-width: $device-lg) {
+    margin: 30px auto;
+    padding: 20px;
+    &__title {
+      margin-right: 15px;
+      flex: 1;
+
+      p:nth-child(2n) {
+        font-size: 1.8em;
+        margin: 0;
+      }
+    }
+
+    &__description {
+      text-align: initial;
+      flex: 3;
+    }
+  }
+
+  @media (min-width: $device-xl) {
+    padding: 20px 0;
+    width: 100%;
+
+    &__description {
+      flex: 4;
+    }
+
+    &__button {
+      padding-right: 15px;
+    }
+  }
+}

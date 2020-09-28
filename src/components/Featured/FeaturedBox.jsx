@@ -4,7 +4,7 @@ import { RiThumbUpLine, RiThumbDownLine } from 'react-icons/ri';
 
 const FeaturedBox = ({ fullName, description }) => {
   return (
-    <div className="featured__box">
+    <section className="featured__box">
       <div className="featured__info">
         <div className="featured__title">
           <span>What is your opinion on</span>
@@ -27,7 +27,7 @@ const FeaturedBox = ({ fullName, description }) => {
           <RiThumbDownLine size={20} />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
