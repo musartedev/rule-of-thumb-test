@@ -8,6 +8,10 @@
   position: absolute;
   width: 100%;
 
+  a {
+    color: $white;
+  }
+
   &__content {
     @include max-width;
     @include flex-all-centered;
@@ -43,10 +47,6 @@
       &__item {
         padding: 0.6em;
         margin: 0.3em;
-
-        a {
-          color: white;
-        }
       }
     }
   }

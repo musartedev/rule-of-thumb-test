@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 
 const HeaderNav = () => {
@@ -6,18 +7,18 @@ const HeaderNav = () => {
     <nav className="header__navigation">
       <ul className="navigationList">
         <li className="navigationList__item">
-          <a href="/">Past Trials</a>
+          <Link to="/past-trials">Past Trials</Link>
         </li>
         <li className="navigationList__item">
-          <a href="/">How It Works</a>
+          <Link to="/how-it-works">How It Works</Link>
         </li>
         <li className="navigationList__item">
-          <a href="/">Login / Sign Up</a>
+          <Link to="/login">Login / Sign Up</Link>
         </li>
         <li className="navigationList__item">
-          <a href="/">
+          <Link to="/search">
             <BsSearch size={23} />
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

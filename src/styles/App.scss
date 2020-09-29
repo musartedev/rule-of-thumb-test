@@ -13,6 +13,10 @@
   @include max-width;
   padding: 1em;
 
+  &--noFeatured {
+    margin-top: $header-xs;
+  }
+
   @media (min-width: $device-xl) {
     padding: 0;
   }

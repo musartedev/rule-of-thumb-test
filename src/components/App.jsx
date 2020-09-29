@@ -1,26 +1,19 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Router from '../router';
 import Header from './Header';
 import Footer from './Footer';
-import Featured from './Featured';
-import ClosableInfo from './ClosableInfo';
-import Feed from './Feed';
-import Banner from './common/Banner';
 
 import '../styles/App.scss';
 
 const App = () => (
-  <div className="layout">
-    <Header />
-    <div>
-      <Featured />
-      <div className="main">
-        <ClosableInfo />
-        <Feed />
-        <Banner />
-      </div>
+  <BrowserRouter>
+    <div className="layout">
+      <Header />
+      <Router />
+      <Footer />
     </div>
-    <Footer />
-  </div>
+  </BrowserRouter>
 );
 
 export default App;
