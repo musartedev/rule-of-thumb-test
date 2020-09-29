@@ -1,0 +1,31 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.rulingSummary {
+  @include light-font;
+  font-size: 1.25em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__option {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+
+    &--up {
+      @include thumb-up-theme(0.6);
+    }
+
+    &--down {
+      @include thumb-down-theme(0.6);
+      justify-content: flex-end;
+    }
+
+    span {
+      margin: 0 5px;
+    }
+  }
+}

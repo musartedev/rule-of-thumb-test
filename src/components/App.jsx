@@ -1,6 +1,19 @@
 import React from 'react';
-import '../styles/components/App.scss';
+import { BrowserRouter } from 'react-router-dom';
+import Router from '../router';
+import Header from './Header';
+import Footer from './Footer';
 
-const App = () => <h1>Speak out. Be heard. Be counted.</h1>;
+import '../styles/App.scss';
+
+const App = () => (
+  <BrowserRouter>
+    <div className="layout">
+      <Header />
+      <Router />
+      <Footer />
+    </div>
+  </BrowserRouter>
+);
 
 export default App;

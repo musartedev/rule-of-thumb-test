@@ -1,5 +1,8 @@
 # Node template
 
+# Lock
+package-lock.json
+
 # Logs
 logs
 *.log

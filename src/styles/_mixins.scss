@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,300&display=swap');
+@import './variables';
+
+@mixin body-font {
+  font-family: 'Lato', sans-serif;
+}
+
+@mixin light-font {
+  font-family: 'Lato Light', sans-serif;
+}
+
+@mixin max-width {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+@mixin flex-all-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-theme($color: $black) {
+  color: $color;
+  border: 1px solid $color;
+}
+
+// These two mixins could be merged on a function
+@mixin thumb-up-theme($opacity: 1) {
+  color: $white;
+  background-color: rgba($primary, $opacity);
+}
+
+@mixin thumb-down-theme($opacity: 1) {
+  color: $white;
+  background-color: rgba($secondary, $opacity);
+}

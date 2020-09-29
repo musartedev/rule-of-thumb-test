@@ -1,0 +1,16 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.thumbSquare {
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+
+  &--up {
+    @include thumb-up-theme;
+  }
+
+  &--down {
+    @include thumb-down-theme;
+  }
+}

@@ -1,0 +1,69 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variables.scss';
+
+.header {
+  background-image: linear-gradient(to top, transparent, rgba($gray, 1));
+  height: $header-xs;
+  color: $white;
+  position: absolute;
+  width: 100%;
+
+  a {
+    color: $white;
+  }
+
+  &__content {
+    @include max-width;
+    @include flex-all-centered;
+
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 1em;
+    font-size: 1.25em;
+  }
+
+  &__brand {
+    font-size: 1.25em;
+  }
+
+  .navigationList {
+    display: none;
+  }
+
+  @media (min-width: $device-md) {
+    height: $header-md;
+
+    &__content {
+      font-size: 1.1em;
+    }
+
+    &__brand {
+      font-size: 1.5em;
+    }
+
+    .navigationList {
+      @include flex-all-centered;
+
+      &__item {
+        padding: 0.6em;
+        margin: 0.3em;
+      }
+    }
+  }
+
+  @media (min-width: $device-lg) {
+    &__content {
+      font-size: 1.25em;
+    }
+
+    &__brand {
+      font-size: 2em;
+    }
+  }
+
+  @media (min-width: $device-xl) {
+    &__content {
+      padding: 0 10px;
+    }
+  }
+}

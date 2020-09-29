@@ -1,0 +1,23 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'global.scss';
+
+.layout {
+  display: grid;
+
+  // Stick the footer to bottom, even if there's no content
+  grid-template-rows: minmax(calc(100vh - 120px), 1fr) 100px;
+}
+
+.main {
+  @include max-width;
+  padding: 1em;
+
+  &--noFeatured {
+    margin-top: $header-xs;
+  }
+
+  @media (min-width: $device-xl) {
+    padding: 0;
+  }
+}
