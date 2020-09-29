@@ -1,0 +1,28 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.mainButton {
+  @include button-theme($black);
+  background-color: transparent;
+  padding: 0.5em;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+
+  &:disabled {
+    cursor: no-drop;
+    @include button-theme(rgba($white, 0.7));
+  }
+
+  &--invert {
+    @include button-theme($white);
+  }
+
+  &--big {
+    font-size: 1.5em;
+  }
+
+  &--huge {
+    font-size: 2em;
+  }
+}

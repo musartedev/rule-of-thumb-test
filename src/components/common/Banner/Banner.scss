@@ -1,0 +1,45 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.banner {
+  width: 100%;
+  margin: 40px 0;
+
+  &__content {
+    padding: 10px 10px;
+    height: 100%;
+    background-color: rgba($white, 0.8);
+    text-align: center;
+
+    h4 {
+      margin: 0 0 20px;
+    }
+
+    button {
+      max-width: 200px;
+    }
+  }
+
+  @media (min-width: $device-sm) {
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h4 {
+        margin: 0;
+      }
+    }
+  }
+
+  @media (min-width: $device-md) {
+    &__content {
+      h4 {
+        font-size: 1.5em;
+      }
+
+      button {
+          font-size: 1.2em;
+      }
+    }
+  }
+}
