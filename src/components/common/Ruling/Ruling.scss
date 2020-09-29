@@ -10,6 +10,7 @@
   position: relative;
   display: flex;
 
+  // Overlay
   &::after {
     position: absolute;
     content: '';

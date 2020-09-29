@@ -18,9 +18,14 @@ const Ruling = ({
   },
 }) => {
   return (
-    <div className="ruling" style={{ backgroundImage: `url(${photoUrl})` }}>
+    <div
+      className="ruling"
+      style={{ backgroundImage: `url(${photoUrl})` }}
+      itemScope
+      itemType="https://schema.org/Person"
+    >
       <div className="ruling__content">
-        <h3>{fullName}</h3>
+        <h3 itemProp="name">{fullName}</h3>
         <div className="ruling__workingInfo">
           <div className="ruling__majorityIndicator">
             <Thumb size={18} type={thumbsUp >= thumbsDown ? 'up' : 'down'} />
