@@ -3,6 +3,9 @@
 # Lock
 package-lock.json
 
+# Build
+dist/
+
 # Logs
 logs
 *.log

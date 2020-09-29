@@ -1,7 +1,9 @@
 # 👍🏽 Rule of Thumb
+
 Speak out. Be heard. Be counted.
 
 ## 🤔 What is this?
+
 Rule of Thumb is a crowd sourced court of public opinion where anyone and everyone can speak out and speak freely.
 
 ## 🚀 Getting Started
@@ -12,9 +14,29 @@ Rule of Thumb is a crowd sourced court of public opinion where anyone and everyo
 4. Run and have fun ;) `npm start`
 
 ## 🛠 Deployment
+
 Once you have the dependencies installed, you can build the project with `npm build`.
 
-This has CI with Netlify.
+This project has CI with Netlify.
+
+## 🖥 Technologies
+
+- Firebase
+- Husky
+- React Router
+- Webpack
+
+## 👉🏼 Methodologies
+
+### Repository
+
+- Git Flow
+
+### Styles
+
+- Mobile First
+- BEM (with Sass)
 
 ## 🧾 License
+
 The MIT License (MIT)
