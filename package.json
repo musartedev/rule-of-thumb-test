@@ -1,6 +1,6 @@
 {
   "name": "rule-of-thumb",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Speak out. Be heard. Be counted ✅",
   "main": "index.js",
   "scripts": {
