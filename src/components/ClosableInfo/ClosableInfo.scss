@@ -39,7 +39,6 @@
   @media (min-width: $device-md) {
     @include flex-all-centered;
     padding: 20px;
-    width: calc(100% - 4.5em);
     &__title {
       margin-right: 15px;
       flex: 1;

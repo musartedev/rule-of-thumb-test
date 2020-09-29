@@ -1,0 +1,17 @@
+@import '../../../styles/mixins.scss';
+@import '../../../styles/variables.scss';
+
+.thumbSquare {
+  padding: 5px;
+  width: 100%;
+  color: $white;
+  text-align: center;
+
+  &--up {
+    background-color: $primary;
+  }
+
+  &--down {
+    background-color: $secondary;
+  }
+}

@@ -110,15 +110,7 @@
     .action__option {
       width: 50%;
       text-align: center;
-      padding: 0.8em;
-      cursor: pointer;
-      &--up {
-        background-color: $primary;
-      }
-
-      &--down {
-        background-color: $secondary;
-      }
+      z-index: 1;
     }
   }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaWikipediaW } from 'react-icons/fa';
-import { RiThumbUpLine, RiThumbDownLine } from 'react-icons/ri';
+import Thumb from '../common/Thumb';
 
 const FeaturedBox = ({ fullName, description }) => {
   return (
@@ -20,11 +20,11 @@ const FeaturedBox = ({ fullName, description }) => {
         <div className="featured__callToAction">What is your veredict?</div>
       </div>
       <div className="featured__actions">
-        <div className="action__option action__option--up">
-          <RiThumbUpLine size={20} />
+        <div className="action__option">
+          <Thumb type="up" size={22} onClick={() => {}} />
         </div>
-        <div className="action__option action__option--down">
-          <RiThumbDownLine size={20} />
+        <div className="action__option">
+          <Thumb type="down" size={22} onClick={() => {}} />
         </div>
       </div>
     </section>

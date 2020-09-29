@@ -12,5 +12,9 @@
 
 .main {
   @include max-width;
-  width: 100%;
+  padding: 1em;
+
+  @media (min-width: $device-xl) {
+    padding: 0;
+  }
 }
