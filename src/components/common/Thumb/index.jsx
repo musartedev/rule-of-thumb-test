@@ -1,25 +1,24 @@
 import React from 'react';
-import { HiThumbUp, HiThumbDown } from 'react-icons/hi';
 import PropTypes from 'prop-types';
+import ThumbFigure from '../ThumbFigure';
 
 import './Thumb.scss';
 
 const CLASS_NAME = 'thumbSquare';
 
 const Thumb = ({ type, size, onClick }) => {
-  const ThumbFigure = type === 'up' ? HiThumbUp : HiThumbDown;
   const classes = `${CLASS_NAME} ${CLASS_NAME}--${type}`;
 
   if (onClick)
     return (
       <button type="button" className={classes} onClick={onClick}>
-        <ThumbFigure size={size} />
+        <ThumbFigure type={type} size={size} />
       </button>
     );
 
   return (
     <div className={classes}>
-      <ThumbFigure size={size} />
+      <ThumbFigure type={type} size={size} />
     </div>
   );
 };

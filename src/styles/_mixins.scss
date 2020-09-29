@@ -24,3 +24,14 @@
   color: $color;
   border: 1px solid $color;
 }
+
+// These two mixins could be merged on a function
+@mixin thumb-up-theme($opacity: 1) {
+  color: $white;
+  background-color: rgba($primary, $opacity);
+}
+
+@mixin thumb-down-theme($opacity: 1) {
+  color: $white;
+  background-color: rgba($secondary, $opacity);
+}

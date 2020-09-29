@@ -35,7 +35,7 @@
       text-transform: uppercase;
       background-color: rgba($black, 0.5);
       width: 35%;
-      font-weight: bolder;
+      font-weight: bold;
       font-size: 0.6em;
     }
 
@@ -47,8 +47,8 @@
       width: 65%;
       font-size: 1em;
 
-      span {
-        font-weight: bolder;
+      span:nth-of-type(1) {
+        font-weight: bold;
         margin-right: 5px;
       }
     }
@@ -106,6 +106,8 @@
 
   &__actions {
     @include flex-all-centered;
+    opacity: 0.8;
+    margin-top: -1px;
 
     .action__option {
       width: 50%;

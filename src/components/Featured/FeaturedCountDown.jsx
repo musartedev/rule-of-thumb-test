@@ -11,8 +11,7 @@ const FeaturedCountDown = ({ closesAt }) => {
       </div>
       <div className="countDown__description">
         <span>{closesAt}</span>
-        {' '}
-        days
+        <span>days</span>
       </div>
     </div>
   );

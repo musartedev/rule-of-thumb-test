@@ -4,14 +4,13 @@
 .thumbSquare {
   padding: 5px;
   width: 100%;
-  color: $white;
   text-align: center;
 
   &--up {
-    background-color: $primary;
+    @include thumb-up-theme;
   }
 
   &--down {
-    background-color: $secondary;
+    @include thumb-down-theme;
   }
 }

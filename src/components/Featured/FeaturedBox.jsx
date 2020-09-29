@@ -21,10 +21,10 @@ const FeaturedBox = ({ fullName, description }) => {
       </div>
       <div className="featured__actions">
         <div className="action__option">
-          <Thumb type="up" size={22} onClick={() => {}} />
+          <Thumb type="up" size={35} onClick={() => {}} />
         </div>
         <div className="action__option">
-          <Thumb type="down" size={22} onClick={() => {}} />
+          <Thumb type="down" size={35} onClick={() => {}} />
         </div>
       </div>
     </section>
