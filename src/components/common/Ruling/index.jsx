@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Thumb from '../Thumb';
 import MainButton from '../MainButton';
+import RulingSummary from '../RulingSummary';
 
 import './Ruling.scss';
-import RulingSummary from '../RulingSummary';
 
 const Ruling = ({
   ruling: {
+    id,
     fullName,
     description,
     photoUrl,
@@ -16,7 +17,59 @@ const Ruling = ({
     thumbsDown,
     thumbsUp,
   },
+  onSubmit,
 }) => {
+  const [selected, setSelected] = useState(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleOnClickThumbUp = () => setSelected('up');
+
+  const handleOnClickThumbDown = () => setSelected('down');
+
+  const handleSubmit = () => {
+    const updatedThumb =
+      selected === 'up'
+        ? { thumbsUp: thumbsUp + 1 }
+        : { thumbsDown: thumbsDown + 1 };
+
+    onSubmit(id, updatedThumb);
+    setSubmitted(true);
+    setSelected(null);
+  };
+
+  const renderActionContent = () => {
+    if (!submitted) {
+      return (
+        <>
+          <div className="action__option">
+            <Thumb type="up" size={22} onClick={handleOnClickThumbUp} />
+          </div>
+          <div className="action__option">
+            <Thumb type="down" size={22} onClick={handleOnClickThumbDown} />
+          </div>
+          <div className="action__submit">
+            <MainButton
+              disabled={selected === null}
+              title="Vote Now"
+              invert
+              onClick={handleSubmit}
+            />
+          </div>
+        </>
+      );
+    }
+
+    return (
+      <div className="action__submit">
+        <MainButton
+          title="Vote Again"
+          invert
+          onClick={() => setSubmitted(false)}
+        />
+      </div>
+    );
+  };
+
   return (
     <div
       className="ruling"
@@ -33,18 +86,8 @@ const Ruling = ({
           <span className="workingInfo__time">{workingSince}</span>
           <span className="workingInfo__place">{`in ${workingAt}`}</span>
         </div>
-        <p>{description}</p>
-        <div className="ruling__actions">
-          <div className="action__option">
-            <Thumb type="up" size={22} onClick={() => {}} />
-          </div>
-          <div className="action__option">
-            <Thumb type="down" size={22} onClick={() => {}} />
-          </div>
-          <div className="action__submit">
-            <MainButton title="Vote Now" invert onClick={() => {}} />
-          </div>
-        </div>
+        <p>{!submitted ? description : 'Thanks for voting!'}</p>
+        <div className="ruling__actions">{renderActionContent()}</div>
       </div>
       <div className="ruling__summary">
         <RulingSummary thumbsUp={thumbsUp} thumbsDown={thumbsDown} />
@@ -63,6 +106,7 @@ Ruling.propTypes = {
     thumbsDown: PropTypes.number.isRequired,
     thumbsUp: PropTypes.number.isRequired,
   }).isRequired,
+  onSubmit: PropTypes.func.isRequired,
 };
 
 export default Ruling;

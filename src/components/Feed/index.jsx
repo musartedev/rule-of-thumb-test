@@ -1,66 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Ruling from '../common/Ruling';
 
 import './Feed.scss';
 
-const rulings = [
-  {
-    id: 1,
-    fullName: 'Kanye West',
-    description:
-      'Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.',
-    photoUrl: 'https://i.ibb.co/hYRJM0W/Layer-13.jpg',
-    workingSince: '1 month ago',
-    workingAt: 'Entertaiment',
-    thumbsUp: 55,
-    thumbsDown: 22,
-  },
-  {
-    id: 2,
-    fullName: 'Cristina Fernández de Kirchner',
-    description:
-      'Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.',
-    photoUrl: 'https://i.ibb.co/hYRJM0W/Layer-13.jpg',
-    workingSince: '1 month ago',
-    workingAt: 'Entertaiment',
-    thumbsUp: 23,
-    thumbsDown: 22,
-  },
-  {
-    id: 3,
-    fullName: 'Kanye West',
-    description:
-      'Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.',
-    photoUrl: 'https://i.ibb.co/hYRJM0W/Layer-13.jpg',
-    workingSince: '1 month ago',
-    workingAt: 'Entertaiment',
-    thumbsUp: 23,
-    thumbsDown: 22,
-  },
-  {
-    id: 4,
-    fullName: 'Kanye West',
-    description:
-      'Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.',
-    photoUrl: 'https://i.ibb.co/hYRJM0W/Layer-13.jpg',
-    workingSince: '1 month ago',
-    workingAt: 'Entertaiment',
-    thumbsUp: 23,
-    thumbsDown: 22,
-  },
-];
-
-const Feed = () => {
+const Feed = ({ rulings, onSubmitRuling }) => {
   return (
     <section className="feed">
       <h2>Previous Rulings</h2>
       <div className="feed__content">
-        {rulings.map(ruling => (
-          <Ruling key={ruling.id} ruling={ruling} />
-        ))}
+        {rulings &&
+          rulings.map(ruling => (
+            <Ruling key={ruling.id} ruling={ruling} onSubmit={onSubmitRuling} />
+          ))}
       </div>
     </section>
   );
 };
-
+Feed.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  rulings: PropTypes.array.isRequired,
+  onSubmitRuling: PropTypes.func.isRequired,
+};
 export default Feed;
