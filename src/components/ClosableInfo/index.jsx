@@ -29,6 +29,7 @@ const index = () => {
         type="button"
         className="closableInfo__button"
         onClick={handleCloseInfo}
+        aria-label="Close Info"
       >
         <FaTimes size={20} />
       </button>

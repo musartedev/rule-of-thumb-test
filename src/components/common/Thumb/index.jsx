@@ -11,14 +11,19 @@ const Thumb = ({ type, size, onClick }) => {
 
   if (onClick)
     return (
-      <button type="button" className={classes} onClick={onClick}>
+      <button
+        type="button"
+        className={classes}
+        onClick={onClick}
+        aria-label={`Thumb ${type}`}
+      >
         <ThumbFigure type={type} size={size} />
       </button>
     );
 
   return (
     <div className={classes}>
-      <ThumbFigure type={type} size={size} />
+      <ThumbFigure type={type} size={size} aria-label={`Thumb ${type}`} />
     </div>
   );
 };

@@ -50,18 +50,25 @@
     @include light-font;
     padding: 0 30px 100px 45px;
     align-self: flex-end;
+    z-index: 1;
+
     h3 {
       margin: 0;
       font-size: 2em;
       font-weight: bold;
     }
-    z-index: 1;
+
+    p {
+      min-height: 4em;
+      max-height: 4em;
+    }
   }
 
   &__actions {
     height: 30px;
     display: flex;
     align-items: center;
+
     > * {
       margin-right: 10px;
     }
